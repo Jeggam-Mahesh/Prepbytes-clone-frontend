@@ -1,0 +1,138 @@
+
+.nav-container{
+    background-color: white;
+display: flex;
+justify-content: space-around;
+align-items: center;
+box-shadow: 2px 0px 5px grey;
+position: relative;
+position:sticky;
+top: 0%;
+width: 100%;
+}
+.prep-logo{
+width: 10rem;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    gap: 5rem;
+    /* font-size:1rem; */
+    /* font-weight:500; */
+    /* color: rgb(104, 103, 103); */
+    color: rgb(102, 102, 102);
+   
+}
+.log-sign{
+    width: 6rem;
+    padding: 1px;
+    border: 2px solid #ff219f;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: large;
+    color:#ff219f;
+    background-color: white;
+    
+}
+.log-sign-container{
+  position:absolute;
+  left: 80%;
+  top: 4px;
+    display: flex;
+   gap: 10px;
+    
+}
+.nav-body{
+    display: flex;
+    flex-direction: column;
+   gap: 3px;
+}
+.sign{
+    color: white;
+    background-color:#ff219f;
+    border: none;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: rgb(102, 102, 102);
+}
+.dropdown{
+    display: none;
+    text-align: left;
+    position:absolute;
+    top: 73px;
+    min-width:110px;
+    animation: anim 0.6s ;
+    box-shadow: 0px 0px 5px grey;
+    z-index: 1;
+    /* border: 1px solid grey; */
+    padding: 10px;
+    background-color: white;
+    line-height: 3rem;
+}
+#menu-dropdown{
+    display: none;
+   
+}
+ul li:hover .dropdown{
+display: block;
+
+}
+
+@keyframes anim{
+    0%{
+        display: block;
+    }
+    25%{
+        display: block;
+      
+    }
+100%{
+    
+    display: block;
+}}
+#hamberger{
+    display: none;
+   width: 2.5rem; 
+   height: 1.5rem;
+}
+.hamberger-div{
+    display: none;
+}
+#close{
+    display: none;
+}
+
+@media screen and (min-width:300px) and (max-width:820px){
+    .nav-body{
+        display: none;
+    }
+    #menu-dropdown{
+        text-align: left;
+        position: absolute;
+        top: 70px;
+        right: 0.2rem;
+        line-height: 3rem;
+        box-shadow: 0px 0px 5px grey;
+        background-color: white;
+        padding: 10px;
+        z-index: 111;
+    }
+    #hamberger{
+        display: block;
+    }
+    .hamberger-div{
+        display:block;
+    }
+    #close{
+        width: 2.5rem; 
+        height: 1.5rem;
+        display: none;
+    }
+}
+   
+    
+

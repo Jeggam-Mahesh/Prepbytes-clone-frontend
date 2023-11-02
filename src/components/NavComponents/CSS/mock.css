@@ -1,0 +1,12 @@
+.mocktest{
+    background: linear-gradient(180deg, #3969ad, #1d3557);
+    color: white;
+    text-align: left;
+    padding: 5px;
+}
+.mock-para{
+    width: 60vw;
+}
+.featured{
+    color:#1d3557
+}
