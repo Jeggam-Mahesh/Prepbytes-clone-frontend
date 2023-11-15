@@ -10,6 +10,7 @@ import axios from "axios";
 import { setCourseData } from "../../../app/CourseEnrolled";
 import Footer from "../../Footer/Footer";
 import Isloading from "../Loading/Isloading";
+import HeaderNav from '../../../Temp/HeaderNav'
 function Dashboard() {
   const dispatch = useDispatch();
   const Testdata = useSelector((state) => state.testenrolled.data);
@@ -40,6 +41,7 @@ function Dashboard() {
   }
   return (
     <>
+    <HeaderNav/>
       {/* <h1>Dashboard</h1> */}
       <div className="main-dash-container">
         <div className="left-dash-container">

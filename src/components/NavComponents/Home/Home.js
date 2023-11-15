@@ -16,10 +16,13 @@ import Footer from "../../Footer/Footer";
 import { Link } from "react-router-dom";
 import Testimonial from "../Fullstack/Testimonial";
 import CallBack from "./CallBack";
+import HeaderNav from '../../../Temp/HeaderNav'
+
 function Home() {
   
   return (
     <>
+    <HeaderNav/>
       <div className="Home-header-main">
         <div className="Home-header-left">
           <h1 className="start-journey">Start your journey of success</h1>

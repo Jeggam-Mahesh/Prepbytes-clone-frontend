@@ -2,7 +2,7 @@
 
 import React from 'react';
 import './Navbar.css'; 
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import logo from '../assets/logoPrepBytes.svg'
 import  { useEffect, useState } from 'react'
 // import downarrow from '../assets/grey-down-arrow.png'
@@ -25,11 +25,12 @@ const Navbar = () => {
     const username = useSelector(state => state.name);
     const [temp,setTemp]=useState('');
     const dispatch = useDispatch();
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
+    const navigate=useNavigate()
+    // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [count,setCount]=useState(0)
+    // const handleResize = () => {
+    //   setWindowWidth(window.innerWidth);
+    // };
     useEffect(()=>{
 const username=localStorage.getItem("name");
 if (username){
@@ -37,23 +38,24 @@ if (username){
     
     // dispatch(setUsername(name))
 }
-window.addEventListener('resize', handleResize);
-return () => {
-  window.removeEventListener('resize', handleResize);
-};
-    },[dispatch,username])
 
-    
+// window.addEventListener('resize', handleResize);
+// return () => {
+//   window.removeEventListener('resize', handleResize);
+// };
+    },[dispatch,username,temp,count])
+
+   
     const handleMenu=()=>{
         document.getElementById('hamberger').style.display="none"
         document.getElementById('close').style.display='block'
         document.getElementById('menu-dropdown').style.display='block'
-        if(windowWidth>500){
-          console.log("window",windowWidth);
-          document.getElementById('hamberger').style.display="block"
-          document.getElementById('close').style.display='none'
-          document.getElementById('menu-dropdown').style.display='none'
-        }
+        // if(windowWidth>500){
+        //   console.log("window",windowWidth);
+        //   document.getElementById('hamberger').style.display="block"
+        //   document.getElementById('close').style.display='none'
+        //   document.getElementById('menu-dropdown').style.display='none'
+        // }
     }
     
     const handeClose=()=>{
@@ -77,16 +79,17 @@ return () => {
     const handleLogout = async () => {
         // Logic for logging out: clear the username from the store
         try{
+         
             dispatch(clearUsername());
             const email=localStorage.getItem("email")
-           
+           setCount(count+1)
         await axios.post(`https://mahesh-prepbytes-server.onrender.com/logoutuser/${email}`)
-        localStorage.clear();
-        document.getElementById('dashboard-container').style.display="none"
-        document.getElementById('username').style.display="none"
-        let log_sign=document.getElementsByClassName('log-sign-container')[0]
-        log_sign.style.display="block"
-        
+        .then((res)=>{
+          localStorage.clear();
+         
+          navigate('/')
+        }).catch((err)=>console.log("error",err))
+       
         }
        catch(err){
         console.log("error",err);
@@ -112,11 +115,12 @@ return () => {
    
   return (
     <>
+    
     <div className='nav-main'>
     <div className='prep-logo'><Link to='/'><img src={logo} alt='not'/></Link></div>
     <div className='nav-right'>
     {
-                    username?<div></div>: <div className='log-sign-container'>
+                    username&&username?<div></div>: <div className='log-sign-container'>
                     <Link to='/login' onClick={login}><button className='log-sign'>Login</button></Link>
                     <Link to='/register' onClick={signUp}> <button className='log-sign sign'>sign up</button></Link>
                    

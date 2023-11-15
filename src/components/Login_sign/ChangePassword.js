@@ -2,6 +2,7 @@ import axios from 'axios'
 import React from 'react'
 import { useLocation } from 'react-router-dom';
 import resetpass from '../../assets/loginsign/ResetPassword.svg'
+import HeaderNav from '../../Temp/HeaderNav'
 function ChangePassword() {
     const location = useLocation();
     const userid = new URLSearchParams(location.search).get("userid");
@@ -29,6 +30,7 @@ function ChangePassword() {
     }
     return (
         <>
+        <HeaderNav/>
         <div className='create-newpassword'>
 <img className='createPass' src={resetpass} alt='not'/>
 <h1>Create New Password</h1>

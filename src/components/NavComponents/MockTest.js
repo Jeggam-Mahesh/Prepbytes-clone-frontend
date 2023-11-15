@@ -12,6 +12,7 @@ import {useNavigate} from 'react-router-dom'
 import Footer from "../Footer/Footer";
 // import loadinglogo from '../../assets/logo.webp'
 import Isloading from "./Loading/Isloading";
+import HeaderNav from '../../Temp/HeaderNav'
 function MockTest() {
     const dispatch = useDispatch();
     const data = useSelector(state => state.mock.data);
@@ -103,7 +104,7 @@ let price=10;
     return (
         // Your JSX using the fetched data
             <>
-           
+           <HeaderNav/>
       <div className="mocktest">
         <h1>Mock Tests</h1>
         <p className="mock-para">

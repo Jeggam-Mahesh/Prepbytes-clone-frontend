@@ -4,6 +4,7 @@ import axios from 'axios'
 import Footer from '../../Footer/Footer';
 import Isloading from '../Loading/Isloading';
 import { useNavigate } from 'react-router-dom'
+import HeaderNav from '../../../Temp/HeaderNav'
 function Checkout() {
     const navigate=useNavigate()
     const [data,setData]=useState()
@@ -70,6 +71,7 @@ function Checkout() {
        }
     return (
         <>
+<HeaderNav/>
         <div className="container">
                 <div className='mycart'>
                     <div className='center'><p className='number'>1</p><p className='bold'>mycart</p></div>

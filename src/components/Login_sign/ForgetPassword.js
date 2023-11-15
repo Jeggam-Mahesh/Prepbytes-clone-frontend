@@ -5,6 +5,7 @@ import mailsent from '../../assets/loginsign/mailsent.svg'
 import { setFlag } from '../../app/Flagslice';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import HeaderNav from '../../Temp/HeaderNav'
 function ForgetPassword() {
     const dispatch=useDispatch()
     const [email, setEmail] = React.useState('')
@@ -35,7 +36,7 @@ console.log('userdata',userdata)
 
     return (
         <>
-     
+     <HeaderNav/>
         { email? <div>
             <img src={mailsent} alt='not'/>
             <p style={{color:"#4b8ce8"}}>Mail Sent</p>

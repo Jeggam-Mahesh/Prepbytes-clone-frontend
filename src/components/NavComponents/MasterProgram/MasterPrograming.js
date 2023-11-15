@@ -37,21 +37,13 @@ import CourseHighlightCardEnd from './CourseHighlightCardEnd'
 import { useNavigate } from 'react-router-dom'
 import Footer from '../../Footer/Footer'
 import { useSelector } from "react-redux"
+import HeaderNav from '../../../Temp/HeaderNav'
 const MasterProgramming = () => {
     let logedin=useSelector(state=>state.name)
     const navigate=useNavigate()
     const [batch, setBatch] = useState(1)
-
-    // useEffect(() => {
-    //     handleLink()
-    //     // dispatch(getCourse("master competitive programming"))
-    // }, [dispatch])
-
-
     const handleEnroll = () => {
-        // dispatch(addToCart({ title: course.title, image: course.thumb, price: course.price, description: course.description, type: "course" }))
-        // localStorage.setItem("from", "/master-competitive-programming")
-       
+        
         if(logedin){
             navigate('/payment')}
             else{
@@ -65,10 +57,11 @@ const MasterProgramming = () => {
     };
     return (
         <>
+        <HeaderNav/>
             {
-                // isLoading ? <Loader /> :
+                
                     <div className='course-page-container'>
-                        {/* <MetaData title='Placement Preparations | PrepBytes' /> */}
+                       
 
                         <div className="course-page-header">
                             <div className="course-page-header--fixed-btn-container">

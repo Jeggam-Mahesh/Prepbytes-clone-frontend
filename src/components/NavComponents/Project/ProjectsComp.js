@@ -4,6 +4,7 @@ import axios from 'axios'
 import { useLocation } from 'react-router-dom'
 import Footer from '../../Footer/Footer'
 import Isloading from '../Loading/Isloading'
+import HeaderNav from '../../../Temp/HeaderNav'
 function ProjectsComp() {
     
     const displayProject=useLocation().state.index
@@ -21,6 +22,7 @@ console.log("display project=====",displayProject);
     }
     return (
         <>
+        <HeaderNav/>
         <div>
             <h1 className="text-center">Projects</h1>
             <div className='project-buttons'>

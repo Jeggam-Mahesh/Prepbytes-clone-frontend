@@ -14,7 +14,7 @@ import Login from './Login'
 import Register from './Register'
 import { setFlag } from '../../app/Flagslice'; // Import the action
 import Footer from '../Footer/Footer'
-// import { use } from '../../../../prepbytes_server/Router/routing'
+import HeaderNav from '../../Temp/HeaderNav'
 function Sign_in_regComp() {
    const dispatch=useDispatch()
    // const [flag,setFlag]=useState(0)
@@ -46,6 +46,7 @@ function Sign_in_regComp() {
    }
     return (
         <>
+        <HeaderNav/>
          <div className='main-container'>
 <div className='left-container'>
     <div>

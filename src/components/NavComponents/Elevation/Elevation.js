@@ -12,7 +12,7 @@ import Tick from "./Assets/righttick.svg"
 import MentorCard from './EComponents//MentorCard'
 import Webinar from './EComponents/Webinar'
 import MetricsCard from './EComponents/MetricsCard'
-
+import HeaderNav from '../../../Temp/HeaderNav'
 import Testimonial from '../Fullstack/Testimonial'
 import Faq from './EComponents/Faq'
 import Footer from '../../Footer/Footer'
@@ -64,6 +64,7 @@ const Elevation = () => {
 
     return (
         <>
+        <HeaderNav/>
                     <div className='elevationCourse'>
                         <div className="elevationCourse-header">
                             <section className="elevationCourse-header-main" style={{ backgroundColor: 'rgb(253, 240, 215)' }}>

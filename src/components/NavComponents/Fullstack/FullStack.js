@@ -36,6 +36,7 @@ import Footer from "../../Footer/Footer"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
+import HeaderNav from '../../../Temp/HeaderNav'
 function FullStack() {
     let logedin=useSelector(state=>state.name)
     const [check, setCheck] = useState(0)
@@ -98,6 +99,7 @@ function FullStack() {
     }
     return (
        <>
+       <HeaderNav/>
       <div className='fullStack-page-container'>
                     {/* <MetaData title='Learn Full Stack Web Development | MERN Certification Program | PrepBytes' /> */}
 

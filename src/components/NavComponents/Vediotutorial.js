@@ -4,6 +4,7 @@ import '../NavComponents/CSS/vedio.css'
 import axios from "axios";
 import Footer from "../Footer/Footer";
 import Isloading from "./Loading/Isloading";
+import HeaderNav from '../../Temp/HeaderNav'
 function Vediotutorial() {
     const [vdata,setVdata]=useState();
     useEffect (()=>{
@@ -15,6 +16,7 @@ function Vediotutorial() {
     }
   return (
     <>
+    <HeaderNav/>
       <div className="top-container">
         <div className="text-para">
           <p className="top-haeding">Prepbytes Video Library</p>

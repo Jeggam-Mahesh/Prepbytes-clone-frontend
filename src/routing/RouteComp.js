@@ -31,6 +31,7 @@ function RouteComp() {
     <Route path='/register' element={<SignInRegComp/>}/>
     <Route path='/forgotpassword' element={<ForgetPassword/>}/>
     <Route path='/changepassword' element={<ChangePassword/>}/>
+    <Route path='#' element={<ChangePassword/>}/>
  </Routes>
 
         </>

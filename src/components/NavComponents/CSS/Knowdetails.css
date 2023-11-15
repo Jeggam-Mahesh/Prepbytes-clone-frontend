@@ -130,7 +130,7 @@
     -webkit-box-pack: space-evenly;
     -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
-     flex-wrap: wrap;
+     flex-wrap:nowrap;
     margin-bottom: -150px;
 }
 
@@ -163,7 +163,7 @@
 }
 
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:920px) {
     .KnowDetails__main {
         padding-left: 20px;
         padding-right: 20px;
