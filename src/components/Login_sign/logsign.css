@@ -39,12 +39,13 @@
     text-align: center;
 }
 .right-container{
-    padding: 15px;
+    padding: 5px;
     text-align: center;
     background: #fff;
     border-radius: 5px;
     height: fit-content;
     width: 350px;
+    margin-top: 20px;
 }
 .right-inner{
     padding: 10px;
