@@ -27,7 +27,7 @@ const submit=()=>{
 axios.post('https://mahesh-prepbytes-server.onrender.com/forgotpassword',userdata)
 .then((res)=>{
     console.log("response",res.data.message)
-    alert(res.data.message)
+    // alert(res.data.message)
     return setEmail(res.data)
 }).catch((err)=>console.log("error",err))
 console.log('userdata',userdata)
