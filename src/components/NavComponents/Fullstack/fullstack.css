@@ -179,13 +179,14 @@ span {
 .batch-text-container>h5 {
     font-size: 17px;
     font-weight: 500;
-    position: relative;
+    /* position: relative; */
+    margin-top: -4px;
 }
 
 .batch-text-container>p {
     color: #f78077;
     font-size: 11px;
-    margin-top: 10px;
+    margin-top: -20px;
 }
 
 .batchDetails-enroll-container {
