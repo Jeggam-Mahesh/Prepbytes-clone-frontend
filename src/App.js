@@ -1,15 +1,15 @@
 
 import './App.css';
-import Footer from './components/Footer/Footer';
-import Navbar from './components/Header/Navbar';
+// import ForgetPassword from './components/Login_sign/ForgetPassword';
 import RouteComp from './routing/RouteComp';
-
+import Navbar from './Temp/HeaderNav';
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-    <RouteComp/>
-    <Footer/>
+      <Navbar/>    
+      <RouteComp/>
+   
+    {/* <ForgetPassword/> */}
     </div>
   );
 }

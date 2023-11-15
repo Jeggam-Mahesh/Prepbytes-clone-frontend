@@ -1,0 +1,36 @@
+.StackMentors__main--container-card {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 21em;
+    flex: 0 0 21em;
+    margin: 50px auto;
+    padding: 15px ;
+    background-color: #fff;
+    position: relative;
+    border-radius: 10px;
+    border-bottom: 10px solid rgba(244, 163, 76, .9294117647058824);
+}
+
+.StackMentors__main--container-card-image {
+    text-align: center;
+    margin-top: -80px;
+}
+
+.StackMentors__main--container-card-image img {
+    height: 150px;
+    width: 150px;
+}
+
+.StackMentors__main--container-card--heading {
+    color: rgba(10,45,71,.9294117647058824);
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.StackMentors__main--container-card--text {
+    color: rgba(106,127,134,.9294117647058824);
+    text-align: center;
+    margin-bottom: 50px;
+}

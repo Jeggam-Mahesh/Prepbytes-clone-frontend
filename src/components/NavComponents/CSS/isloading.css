@@ -1,0 +1,16 @@
+.lazyloading{
+    position: absolute;
+    left: 43%;
+    top: 300px;
+animation: loading 1s infinite alternate-reverse;
+}
+@keyframes loading {
+    from{
+       width: 70px;
+       height: 70px; 
+    }
+    to{
+       width: 85px;
+       height: 85px;
+    }
+}

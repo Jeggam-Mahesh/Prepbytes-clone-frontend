@@ -1,0 +1,131 @@
+.main-containers {
+    background: #fff;
+    min-height: 50px;
+}
+
+.main-container-inner {
+    max-width: 1082px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.main-heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.card-container {
+    display: flex;
+    margin: 58px 10px 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.course-types-card {
+    position: relative;
+    flex: 0 0 15em;
+    margin: 5px;
+    height: 380px;
+}
+
+.course-types-card .card-back {
+    position: absolute;
+    top: -35px;
+    left: 20px;
+    z-index: 1;
+}
+
+.course-types-card .card-back>img {
+    height: 150px;
+    max-width: 175px;
+}
+
+.course-types-card .card-inner {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 32px rgba(0, 0, 0, .1);
+    position: relative;
+    z-index: 10;
+    height: 320px;
+    margin-bottom: 60px;
+    padding: 0 1em;
+    width: 17em;
+}
+
+.course-types-card .card-inner:hover {
+    box-shadow: 0 14px 28px rgb(0 0 0/25%), 0 10px 10px rgb(0 0 0/22%);
+}
+
+.course-types-card .card-inner-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-types-card .card-inner-img>img {
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+}
+
+.course-types-card .card-inner h2 {
+    margin: 30px;
+    color: #f78077;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.card-inner-bottom {
+    width: 100%;
+}
+
+.card-inner-bottom,
+.card-inner-bottom .arrow-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-inner-bottom .arrow-btn {
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 3px 32px rgba(0, 0, 0, 0.16);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    bottom: -25px;
+}
+
+@media screen and (max-width:1024px) {}
+
+@media screen and (max-width:900px) {
+    .main-container-inner {
+        justify-content: space-around;
+    }
+
+    .course-types-card {
+        flex: 0 0 16em;
+    }
+
+    .card-inner-bottom .arrow-btn {
+        right: -25px;
+        bottom: 40%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .main-heading {
+        font-size: 25px;
+    }
+
+    .card-container {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}

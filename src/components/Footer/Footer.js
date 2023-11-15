@@ -8,6 +8,7 @@ import cantact from '../../assets/Social media/contact.svg'
 import mail from '../../assets/Social media/mail us.svg'
 import { Link } from 'react-router-dom'
 function Footer() {
+    let html="html"
     return (
         <>
         <div style={{backgroundColor:"#d9f5f9 "}}>
@@ -51,11 +52,12 @@ function Footer() {
             <div className='quicklinks'>
                 <p className='footer-heaings'>QUICK LINKS</p>
                 <div>
+                <li><Link to='/mocktest'>Mock Test</Link></li>
                 <li> <Link to='/vediotutorial'>Vedio Tutorials</Link> </li>
                 <li><Link to='/masterprogram'>Master Competitive Programming</Link> </li>
                 <li><Link to='/fullstack'>Full Stack Program </Link> </li>
                 <li><Link to='/elevation'>Elevation Academy</Link> </li>
-                    <li><Link>Project</Link> </li>
+                    <li><Link to='/project' state={{index:html}}>Project</Link> </li>
                 </div>
             </div>
         </div>

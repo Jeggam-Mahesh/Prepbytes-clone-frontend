@@ -1,0 +1,192 @@
+.PrepMentors_main{
+    text-align: center;
+}
+.main--heading{
+    font-size: 2.5em;
+}
+.main--subheading{
+    margin-left: 200px;
+    text-align: center;
+   width: 60%;
+}
+.cards--container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-around;
+}
+.PrepMentors-card{
+    width: 29%;
+
+    background-color: white;
+    box-shadow: 0px 0px 5px grey;
+}
+.Profile{ 
+    /* margin-left: -100px; */
+    margin-right: 190px;
+    margin-top: -165px;
+}
+.card-text{
+    margin-left: 20px;
+    text-align: left;
+}
+.card-info {
+    /* padding: 20px 0; */
+    /* margin: 0 20px; */
+    border-top: 2px solid #f7f7f7;
+    /* height: 200px; */
+    overflow: auto;
+    border-bottom:2px solid #f7f7f7;
+}
+
+.PrepMentors-description {
+    font-size: 14px;
+    color: #4f4f53;
+    width: 25vw;
+    min-height: 130px;
+    text-align: left;
+    margin-left: 20px;
+}
+@media screen and (max-width:930px) {
+    .PrepMentors-card{
+        width: 40%;
+    
+        background-color: white;
+        box-shadow: 0px 0px 5px grey;
+    }
+.background--img{
+    width: 39vw;
+}
+}
+@media screen and (max-width:800px) {
+    .cards--container{
+ flex-direction: column;
+    }   
+    .PrepMentors-description{
+width: 98%;
+    }
+    .main--subheading{
+        margin-left: 0px;
+        text-align: center;
+       width: 100%;
+    }
+    .PrepMentors-card{
+        width: 95%;
+    margin-left: 10px;
+        /* background-color: white;
+        box-shadow: 0px 0px 5px grey; */
+    }
+   
+.background--img{
+    width: 95vw;
+}
+.card-text {
+    margin-top: 20px;
+    padding: 7px;
+}
+
+}
+/* .PrepMentor-company{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+} */
+
+/* .PrepMentors-card {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20em;
+    flex: 0 0 20em; 
+    margin: 50px 30px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 10px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 36px rgba(0,0,0,.1607843137254902);
+    box-shadow: 0 3px 36px rgba(0,0,0,.1607843137254902);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+}
+
+.card-image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.background--img {
+    width: 100%;
+}
+
+.card-image{
+    border-radius: 50%;
+    width: 132px;
+    border-style: bold;
+    border-color: #fff;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+}
+
+.card-text {
+    margin-top: 40px;
+    padding: 7px;
+}
+
+.PrepMentors-name {
+    color: #424242;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.card-designation {
+    font-size: 14px;
+    color: #858585;
+    margin-left: 15px;
+}
+
+.card-info {
+    padding: 20px 0;
+    margin: 0 20px;
+    border-top: 2px solid #f7f7f7;
+    height: 200px;
+    overflow: auto;
+}
+
+.PrepMentors-description {
+    font-size: 14px;
+    color: #4f4f53;
+}
+
+.PrepMentors-company {
+    padding: 7px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid #f7f7f7;
+    border-radius: 30px 30px 10px 10px;
+    width: 100%;
+}
+
+.company--img {
+    padding: 8px;
+} */

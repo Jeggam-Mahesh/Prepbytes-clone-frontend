@@ -1,0 +1,130 @@
+.elevationJourney_container {
+    max-width: 1440px;
+    margin: 80px auto 25px;
+    padding: 40px 10%;
+    background-size: cover;
+}
+.journey-main{
+    display: flex;
+    align-items: center;
+}
+.elevationJourney_heading_container_mobile {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.elevationJourney_heading_mobile {
+    color: #424242;
+    letter-spacing: 0;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.elevationJourney_list_container_mobile {
+    padding: 50px 20px 30px;
+}
+
+.elevationJourney_title_container_mobile {
+    width: 70%;
+    background: #fff 0 0 no-repeat padding-box;
+    border: .5px solid #c2c2c2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+   
+}
+
+.elevationJourney_title_number_mobile {
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1607843137254902);
+    border-radius: 10px;
+    color: #424242;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* top: -27px; */
+    left: -25px;
+}
+.line2{
+   height: 0px;
+   width: 80px;
+   border: 3px solid rgb(56, 78, 218);
+}
+.elevationJourney_title_mobile {
+    letter-spacing: 0;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+   
+    position: relative;
+    
+    padding: 0 15px;
+    /* top: -20px; */
+}
+
+.elevationJourney_desc_container_mobile {
+    background: transparent linear-gradient(118deg, #fff, #f3fcff) 0 0 no-repeat padding-box;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1607843137254902);
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    display: flex;
+    width: 60vw;
+    align-items: center;
+}
+
+.elevationJourney_desc_mobile {
+    letter-spacing: 0;
+    padding:5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #424242;
+    width: 60%;
+    padding: 15px 20px;
+    max-height: 110px;
+    overflow-y: auto;
+}
+
+.elevationJourney_desc_img_container_mobile {
+    
+
+}
+
+.elevationJourney_desc_img_container_mobile picture {
+    display: flex;
+}
+
+.elevationJourney_desc_img_container_mobile img {
+    height: 100%;
+    width: 100%;
+}
+
+
+@media screen and (max-width:1024px) {}
+
+@media screen and (max-width:900px) {
+    .elevationJourney_container {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .journey-main{
+      flex-direction: column;
+        align-items: center;
+    }
+    .elevationJourney_desc_container_mobile{
+        flex-direction: column-reverse;
+    }
+    .line2{
+        display: none;
+    }
+}

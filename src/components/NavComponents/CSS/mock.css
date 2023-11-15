@@ -5,8 +5,88 @@
     padding: 5px;
 }
 .mock-para{
-    width: 60vw;
+    width: 60vw; 
 }
+
 .featured{
-    color:#1d3557
+    margin-left: 5px;
+    color:#3969ad;
+    text-align: left;
+    font-size:2em; 
+}
+.mock-card{
+   
+    width: 17em;
+    /* border: 2px solid black; */
+    box-shadow: 0 10px 30px rgba(95,141,196,.2);
+    border-radius: 5px;
+    color: #707070;
+    margin: 0 auto 30px;
+    padding-top: 10px;
+    background: transparent linear-gradient(180deg,#e0ebf9,#fff 54%,#fff) 0 0 no-repeat padding-box;
+}
+.past-mock{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.sub-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.underline{
+    width: 40vw;
+    height: 0px;
+    border: 2px solid #3969ad;
+}
+.text{
+    color:rgb(239, 166, 83);
+    font-size: larger;
+}
+.card-middle{
+    font-size: small;
+    display: flex;
+    justify-content: space-around;
+}
+.card-image{
+    width: 100px;
+    height: 100px;
+}
+.tittle{
+    color: #3969ad;
+    /* color: #aac5eb; */
+    text-align: center;
+    margin: 0px 20px;
+
+}
+.card-middle{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color:#707070;
+    line-height:0.5rem;
+}
+.buynow{
+    margin-bottom: 10px;
+    background: #3969ad;
+    font-size: larger;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    width: 10em;
+}
+.info-share{
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+}
+@media screen and (max-width:500px) {
+    .mock-para{
+        width: 95vw;
+        text-align: left;
+        margin-left:10px;
+    }
 }

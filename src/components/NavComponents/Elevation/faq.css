@@ -1,0 +1,67 @@
+.IncomeSharingFaqs__main {
+    padding: 25px 0;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.IncomeSharingFaqs__main-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.IncomeSharingFaqs__main-top--heading {
+    color: #3f3c3c;
+    text-align: center;
+    font: normal normal 500 1.75rem/3rem Inter;
+    position: relative;
+}
+
+.IncomeSharingFaqs__main-middle {
+    margin-top: 25px;
+}
+
+.IncomeSharingFaqs__main-middle-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.IncomeSharingFaqs__main-middle-content-tab {
+    background: #f5f1ff;
+    margin: 20px;
+    padding: 20px 17px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.IncomeSharingFaqs__main-middle-content-tab--active {
+    background: #00a6eb;
+    color: #f7f7f7;
+}
+
+.IncomeSharingFaqs__main-middle-content-tab--text {
+    font-size: 16px;
+}
+
+@media screen and (max-width:500px) {
+    .IncomeSharingFaqs__main-top--heading {
+        font-size: 24px;
+    }
+
+    .IncomeSharingFaqs__main-middle {
+        margin-top: 18px!important;
+    }
+}

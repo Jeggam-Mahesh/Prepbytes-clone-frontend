@@ -1,0 +1,282 @@
+.KnowDetails {
+    background: #fdf0d7;
+    min-height: 50px;
+}
+
+.KnowDetails__main {
+    max-width: 1088px;
+    margin: 0 auto;
+    padding: 120px 20px 0;
+}
+
+.KnowDetails__main-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.KnowDetails__main-top-left {
+    width: 60%;
+    position: relative;
+}
+
+.KnowDetails__main-top-left-back {
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    z-index: 1;
+}
+
+.KnowDetails__main-top-left-box {
+    background: #fff 0 0 no-repeat padding-box;
+    -webkit-box-shadow: 0 3px 32px rgba(0, 0, 0, .1607843137254902);
+    box-shadow: 0 3px 32px rgba(0, 0, 0, .1607843137254902);
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    border-radius: 4px;
+}
+
+.KnowDetails__main-top-left-box-top {
+    background-image: url("../Home/homeassets/founderBG.svg");
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+
+.KnowDetails__main-top-left-box--text {
+    color: #f78077;
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 14px;
+}
+
+.KnowDetails__main-top-left-box--subtext {
+    color: #858585;
+    font-size: 18px;
+}
+
+.KnowDetails__main-top-left-box-company {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.KnowDetails__main-top-left-box-company--img {
+    padding: 10px;
+}
+
+.KnowDetails__main-top-right {
+    width: 70%;
+    padding: 0 20px 0 80px;
+}
+
+.KnowDetails__main-top-right--heading {
+    color: #f78077;
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.KnowDetails__main-top-right-container-box {
+    position: relative;
+}
+
+.KnowDetails__main-top-right-container-box--text {
+    color: #858585;
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 35px;
+    margin-bottom: 40px;
+}
+
+.KnowDetails__main-top-right-container-box--btn {
+    font-size: 18px;
+    background: #00a5ec;
+    padding: 12px 40px;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.KnowDetails__main-top-right-container-box:not(:last-child):after {
+    content: "";
+    position: absolute;
+    top: 120%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: .5em;
+    border-top: 1px solid #b6b6b6;
+}
+
+.KnowDetails__main-bottom {
+    margin-top: 30px;
+}
+
+.KnowDetails__main-bottom-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+     flex-wrap: wrap;
+    margin-bottom: -150px;
+}
+
+.KnowDetails__main-bottom-container-card {
+    background: #fff 0 0 no-repeat padding-box;
+    -webkit-box-shadow: 0 3px 32px rgba(12,71,128,.10196078431372549);
+    box-shadow: 0 3px 32px rgba(12,71,128,.10196078431372549);
+    padding: 10px 20px;
+    margin: 30px 10px;
+    flex: 0 0 14em;
+    border-radius: 8px;
+}
+
+.KnowDetails__main-bottom-container-card-image {
+    text-align: center;
+}
+
+.KnowDetails__main-bottom-container-card--heading {
+    text-align: center;
+    color: #424242;
+    font-size: 35px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.KnowDetails__main-bottom-container-card--subheading {
+    text-align: center;
+    color: #858585;
+    font-size: 16px;
+}
+
+
+@media screen and (max-width:900px) {
+    .KnowDetails__main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .KnowDetails__main-top {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .KnowDetails__main-top-left {
+        width: 100%;
+    }
+
+    .KnowDetails__main-top-right {
+        width: 100%;
+        padding: 0;
+    }
+    .KnowDetails__main-top-right--heading {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .KnowDetails__main-top-right-container-box--text {
+        margin: 20px 0;
+        text-align: center;
+    }
+    .KnowDetails__main-top-right-container-box {
+        text-align: center;
+    }
+
+    .KnowDetails__main-top-right-container-box--text {
+        margin: 20px 0;
+        text-align: center;
+    }
+    .KnowDetails__main-bottom {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .KnowDetails__main-bottom-container {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .KnowDetails__main-top-left-box--text {
+        font-size: 25px;
+    }
+
+    .KnowDetails__main-top-left-box--subtext {
+        font-size: 15px;
+    }
+
+    .KnowDetails__main-top-right {
+        padding: 0;
+    }
+
+    .KnowDetails__main-top-right--heading {
+        font-size: 24px;
+    }
+
+    .KnowDetails__main-top-right-container {
+        width: 80%;
+        margin: auto;
+    }
+
+    .KnowDetails__main-top-right-container-box {
+        text-align: center;
+    }
+
+    .KnowDetails__main-top-right-container-box--text {
+        font-size: 18px;
+    }
+
+    .KnowDetails__main-top-right-container-box--text {
+        font-size: 22px;
+        margin-top: 40px;
+    }
+
+    .KnowDetails__main-top-right-container-box--text {
+        font-size: 18px;
+    }
+
+    .KnowDetails__main-top-right-container-box--text {
+        font-size: 22px;
+        margin-top: 40px;
+    }
+
+    .KnowDetails__main-bottom-container {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .KnowDetails__main-bottom-container-card {
+        padding: 10px;
+        margin: 10px;
+        max-width: 120px;
+    }
+
+    img.KnowDetails__main-bottom-container-card-image--img {
+        width: 60%;
+        height: 60px;
+    }
+
+    .KnowDetails__main-bottom-container-card--subheading {
+        font-size: 11px;
+    }
+}
