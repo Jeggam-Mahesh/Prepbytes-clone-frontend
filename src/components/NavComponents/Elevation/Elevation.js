@@ -17,8 +17,8 @@ import HeaderNav from '../../../Temp/HeaderNav'
 import Testimonial from '../Fullstack/Testimonial'
 import Faq from './EComponents/Faq'
 import Footer from '../../Footer/Footer'
-
-
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 const companies = [
     "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/Paytm_Logo.webp",
     "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/ISA/info_edge_Logo.svg",
@@ -60,8 +60,58 @@ const mentors = [
 
 const Elevation = () => {
     const [showForm, setShowForm] = useState(false)
-
-    
+    const navigate=useNavigate()
+let price=7000
+    async function displayRazorpay(item){
+        let name=localStorage.getItem('name')
+        let email=localStorage.getItem('email')
+            let response=await axios.post("https://mahesh-prepbytes-server.onrender.com/checkout",{"amount":7000*100})
+            let order_id=response.data.order.id
+            console.log("orrder id",order_id);
+              
+          const options ={
+            key:"rzp_test_FaT0o1O7SAaX6o", // Enter the Test API Key ID
+            amount:price*100,// Amount is in currency subunits. Hence, 20 refers to 20
+             currency:"INR",
+             name:name,
+             description:"Test transaction",
+             order_id:order_id,
+             handler:function(response){
+            //   alert(response.razorpay_payment_id)
+            //   alert(response.razorpay_order_id)
+            //   alert(response.razorpay_signature)
+              navigate('/elevation')
+              
+              const paymentOption={
+                razorpay_payment_id:response.razorpay_payment_id,
+                razorpay_order_id:response.razorpay_order_id,
+                razorpay_signature:response.razorpay_signature
+              }
+              axios.post("https://mahesh-prepbytes-server.onrender.com/paymentverification",paymentOption)
+             },
+            //  callback_url:"http://localhost:5000/paymentverification",
+             prefill:{ 
+              name:name,
+              email:email, 
+              contact:9998888345
+             }
+          }
+          let rzp=new window.Razorpay(options); 
+          rzp.open();
+      
+        //   try {
+        //     const token = localStorage.getItem("token");
+        //     const response = await axios.post(`https://mahesh-prepbytes-server.onrender.com/addtocourse`,item,{
+        //       headers: { authorization:token }
+        //     });
+        //     // Handle success or error response from the server
+        //     console.log(response.data.message); // Log success message or handle errors
+        //   } catch (error) {
+        //     // Handle errors from the server
+        //     console.error("Error purchasing test:", error.response.data.message);
+        //   }
+      
+           }
 
     return (
         <>
@@ -158,7 +208,7 @@ const Elevation = () => {
                                 <p className="UpcomingBatches__main-left--text">
                                     Upcoming Elevation Academy Batch - Full Stack Web Development Career - May 2023 now OPEN
                                 </p>
-                                <button className="UpcomingBatches__main-left--btn">
+                                <button className="UpcomingBatches__main-left--btn" onClick={displayRazorpay}>
                                     Apply Now
                                 </button>
                             </div>
