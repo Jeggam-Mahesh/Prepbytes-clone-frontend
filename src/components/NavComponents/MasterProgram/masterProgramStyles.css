@@ -501,8 +501,8 @@
 
 .CoursePageLearnings__details-container {
     display: flex;
-    flex-wrap: wrap;
-    width: 70%;
+    flex-wrap: nowrap;
+    width: 95%;
     color: #151414;
 }
 

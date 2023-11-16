@@ -10,6 +10,7 @@ import Journey from './EComponents/Journey'
 import ProgramHighlights from './EComponents/ProgramHighlights'
 import Tick from "./Assets/righttick.svg"
 import MentorCard from './EComponents//MentorCard'
+import EaSyllabus from './EComponents/EaSyllabus'
 import Webinar from './EComponents/Webinar'
 import MetricsCard from './EComponents/MetricsCard'
 import HeaderNav from '../../../Temp/HeaderNav'
@@ -149,7 +150,7 @@ const Elevation = () => {
 
                     <ProgramHighlights />
 
-                    {/* <EaSyllabus syllabus={course?.syllabus} /> */}
+                     <EaSyllabus/>
 
                     <section className="UpcomingBatches">
                         <div className="UpcomingBatches__main">

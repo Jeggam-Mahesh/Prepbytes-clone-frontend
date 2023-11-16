@@ -28,7 +28,7 @@ import Statistics from './Statistics'
 import StackMentorCard from './StackMentorCard'
 // import Loader from '../components/Loader'
 import StackJourneyIpad from './StackJourneyIpad'
-// import FsSyllabus from './FsSyllabus'
+import FsSyllabus from './Fullsatcksyllabus'
 // import MetaData from '../components/MetaData'
 import Testimonial from './Testimonial'
 import FaqPanel from './FaqPanel'
@@ -37,6 +37,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
 import HeaderNav from '../../../Temp/HeaderNav'
+import StackCertification from "./StackCertification"
 function FullStack() {
     let logedin=useSelector(state=>state.name)
     const [check, setCheck] = useState(0)
@@ -101,7 +102,7 @@ function FullStack() {
        <>
        <HeaderNav/>
       <div className='fullStack-page-container'>
-                    {/* <MetaData title='Learn Full Stack Web Development | MERN Certification Program | PrepBytes' /> */}
+ {/* <MetaData title='Learn Full Stack Web Development | MERN Certification Program | PrepBytes' /> */}
 
                     <div className="fullStack-header">
                         <section className="fullStack-main">
@@ -252,8 +253,8 @@ function FullStack() {
                         </div>
                     </div>
 
-                    {/* <FsSyllabus /> */}
-
+                    <FsSyllabus />
+                   <StackCertification/>
                     <Testimonial />
 
                     <div className="StackMetrics">

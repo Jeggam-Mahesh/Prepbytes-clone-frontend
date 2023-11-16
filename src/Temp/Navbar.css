@@ -79,7 +79,7 @@ nav a:hover {
  background-color: white;
   box-shadow: 1px 0px 2px rgb(201, 200, 200);
   position:sticky;
-  z-index: 999;
+  z-index: 99999;
   top: 0px;
 }
 .nav-right{
