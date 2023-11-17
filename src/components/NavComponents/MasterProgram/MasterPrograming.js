@@ -45,7 +45,7 @@ const MasterProgramming = () => {
     const handleEnroll = () => {
         
         if(logedin){
-            navigate('/payment')}
+            navigate('/checkout')}
             else{
              navigate('/login')
             }

@@ -34,7 +34,7 @@ function Checkout() {
         //   alert(response.razorpay_payment_id)
         //   alert(response.razorpay_order_id)
         //   alert(response.razorpay_signature)
-          navigate('/masterprogram')
+          navigate('/master-competitive-program')
           
           const paymentOption={
             razorpay_payment_id:response.razorpay_payment_id,

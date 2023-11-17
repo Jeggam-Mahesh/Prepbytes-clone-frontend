@@ -52,11 +52,11 @@ function Footer() {
             <div className='quicklinks'>
                 <p className='footer-heaings'>QUICK LINKS</p>
                 <div>
-                <li><Link to='/mocktest'>Mock Test</Link></li>
-                <li> <Link to='/vediotutorial'>Vedio Tutorials</Link> </li>
-                <li><Link to='/masterprogram'>Master Competitive Programming</Link> </li>
-                <li><Link to='/fullstack'>Full Stack Program </Link> </li>
-                <li><Link to='/elevation'>Elevation Academy</Link> </li>
+                <li><Link to='/mock-tests'>Mock Test</Link></li>
+                <li> <Link to='/preparation-videos'>Vedio Tutorials</Link> </li>
+                <li><Link to='/master-competitive-program'>Master Competitive Programming</Link> </li>
+                <li><Link to='/online-full-stack-developer-mern-certification-program'>Full Stack Program </Link> </li>
+                <li><Link to='/elevation-academy'>Elevation Academy</Link> </li>
                     <li><Link to='/project' state={{index:html}}>Project</Link> </li>
                 </div>
             </div>

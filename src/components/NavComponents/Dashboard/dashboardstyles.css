@@ -4,6 +4,7 @@
     gap: 20px;
     flex-direction: row;
     background: #f3f4f5;
+    /* min-height: 99%; */
 }
 .MuiSvgIcon-root{
     
@@ -41,13 +42,13 @@ width: 300px;
     background: transparent linear-gradient(180deg,#e0ebf9,#fff 54%,#fff) 0 0 no-repeat padding-box;
 }
 .topbar{
-    /* width: 100px; */
-    display: flex;
-    gap: 20vw;
-    align-items: center;
-    justify-content: flex-start;
+    width: 100%;
+    /* display: flex; */
+    /* gap: 20vw; */
+    /* align-items: center;
+    justify-content: flex-start; */
     height: 50px;
-    border-bottom: 2px solid grey;
+    border-bottom: 1px solid rgb(198, 196, 196);
     /* box-shadow: 0px 0px 5px rgb(216, 214, 214); */
 }
 .card-container{
@@ -77,6 +78,11 @@ width: 300px;
     margin: 0px 20px;
 
 }
+.right-dash-container{
+    background-color: #ecf0f1;
+     min-height: 400px;
+     width: 70%;
+}
 .card-middle{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -94,8 +100,8 @@ width: 300px;
     }
     .right-dash-container{
         width: 95vw;
-        /* align-items: center; */
-        /* justify-content: center; */
+       
+       min-height: 400px;
     }
     .topbar{
         width: 100%;

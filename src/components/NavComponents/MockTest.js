@@ -43,8 +43,8 @@ let price=10;
         // ><img src={loadinglogo} alt="not"/></div>; // You can modify the loading state accordingly
     }
 
-    console.log("data....", data);
-    console.log("Topic data....", Tdata);
+    // console.log("data....", data);
+    // console.log("Topic data....", Tdata);
     async function displayRazorpay(item){
     if(!logedin){
       navigate('/login')

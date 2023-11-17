@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setUsername } from '../../app/Username';
 import { Link } from 'react-router-dom';
+
 function Login() {
     const dispatch=useDispatch()
     const navigate = useNavigate();
@@ -24,6 +25,10 @@ function Login() {
             .then((res)=>{
                 console.log("Respone",res);
                 // alert(res.data.msg);
+                if(res.data.msg!=="user is successfully loged in"){
+                    document.getElementById('login_response').innerHTML=res.data.msg
+                    return setTimeout(()=>document.getElementById('login_response').innerHTML="",2000)
+                }
                 const username  = res.data.username; // Assuming the username is sent back in the response
                 const token=res.data.token
                 const email=res.data.email
@@ -53,6 +58,7 @@ function Login() {
        <>
       <div>
         <p className='heading'>Sign in to your account</p>
+        <p style={{color:"red"}} id="login_response"></p>
         <div className='form-container'>
         <input type="text" name="email" placeholder=" email" required onChange={handleChange}/>
         <input type="password" name="password" placeholder="password" required onChange={handleChange}/>

@@ -3,10 +3,6 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setFlag } from '../../app/Flagslice'
-import Isloading from '../NavComponents/Loading/Isloading'
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
-
 function Register() {
     const dispatch=useDispatch();
     const navigate=useNavigate()
@@ -25,13 +21,24 @@ function Register() {
     }
     const handleRegister= async(e)=>{
         e.preventDefault(e);
+
+        for (const key in userData) {
+            if (userData.hasOwnProperty(key) && userData[key] === '') {
+                // alert('');
+                document.getElementById('reg_form_empty').innerHTML="Please fill in all fields"
+                return setTimeout(()=> document.getElementById('reg_form_empty').innerHTML="",2000)
+                 // Stop registration process if any field is empty
+            }
+        }
+    
         console.log('user data',userData)
         const data= await axios.post('https://mahesh-prepbytes-server.onrender.com/register',userData)
         .then((res)=>{
-            // alert(res.data.msg)
-            // toast.success("successfully registered")
-            if(!res.data.msg){
-                return <Isloading/>
+           
+            if(res.data.msg==="user is already registered"){
+                
+                 document.getElementById('reg_response').innerHTML=res.data.msg
+                return setTimeout(()=>document.getElementById('reg_response').innerHTML="",2000)
             }
             else{
                 dispatch(setFlag(1));
@@ -44,21 +51,23 @@ function Register() {
     }
     return ( 
         <>
-        {/* <ToastContainer/> */}
+       
        <div>
 
         <p className='heading'>Create your new account</p>
+        <p style={{color:"red"}} id="reg_response"></p>
+        <p style={{color:"red"}} id="reg_form_empty"></p>
         <div className='form-container'>
            
-            <input type="text" name='name' placeholder=" name"  onChange={handleChange}/>
-            <input type="text" name="email" placeholder=" email" onChange={handleChange}/>
-            <input type="number" name="mobile" placeholder=" phone no" onChange={handleChange}/>
-            <input type="password" name="password" placeholder="password" onChange={handleChange}/>
+            <input type="text" name='name' placeholder=" name" required  onChange={handleChange}/>
+            <input type="text" name="email" placeholder=" email"  required  onChange={handleChange}/>
+            <input type="number" name="mobile" placeholder=" phone no"  required  onChange={handleChange}/>
+            <input type="password" name="password" placeholder="password"  required  onChange={handleChange}/>
            
             {/* <label>Passing Year</label> */}
             <div className='clg-pasyear'>
-            <input className='college' type="text" name="college" placeholder="college" onChange={handleChange}/>
-            <select style={{color:"grey"}} name="passingYear" placeholder='Passing Year'  onChange={handleChange}>
+            <input className='college' type="text" name="college" placeholder="college"  required  onChange={handleChange}/>
+            <select style={{color:"grey"}} name="passingYear" placeholder='Passing Year' required  onChange={handleChange}>
                   <option  value="">Passing Year</option>
                   <option value="2028">2028</option>
                   <option value="2027">2027</option>

@@ -130,21 +130,21 @@ if (username){
       <div className="dropdown">
         <button className="dropbtn">Study Materials</button>
         <div className="dropdown-content">
-          <Link to="/mocktest">Mock Tests</Link>
-          <Link to="/vediotutorial">Video Tutorials</Link>
+          <Link to="/mock-tests">Mock Tests</Link>
+          <Link to="/preparation-videos">Video Tutorials</Link>
         </div>
       </div>
 
       <div className="dropdown">
         <button className="dropbtn">Course and  Programs</button>
         <div className="dropdown-content">
-        <Link to="/masterprogram">Master Competitive Programming</Link>
-          <Link to="/fullstack">FullStack Program</Link>
+        <Link to="/master-competitive-program">Master Competitive Programming</Link>
+          <Link to="/online-full-stack-developer-mern-certification-program">FullStack Program</Link>
         </div>
       </div>
 
      
-      <Link to="/elevation">Elevation Academy</Link>
+      <Link to="/elevation-academy">Elevation Academy</Link>
 
       <div className="dropdown">
         <button className="dropbtn">Projects</button>
@@ -193,11 +193,11 @@ if (username){
             </div> :<div></div>
               }
                
-            <li><Link to='/mocktest' onClick={handeClose}>Mock Test</Link></li>
-                <li> <Link to='/vediotutorial' onClick={handeClose}>Vedio Tutorials</Link> </li>
-                <li><Link to='/masterprogram' onClick={handeClose}>Master Competitive Programming</Link></li>
-                <li><Link to='/fullstack' onClick={handeClose}>Full Stack Program </Link> </li>
-                <li><Link to='/elevation' onClick={handeClose}>Elevation Academy</Link> </li>
+            <li><Link to='/mock-tests' onClick={handeClose}>Mock Test</Link></li>
+                <li> <Link to='/preparation-videos' onClick={handeClose}>Vedio Tutorials</Link> </li>
+                <li><Link to='/master-competitive-program' onClick={handeClose}>Master Competitive Programming</Link></li>
+                <li><Link to='/online-full-stack-developer-mern-certification-program' onClick={handeClose}>Full Stack Program </Link> </li>
+                <li><Link to='/elevation-academy' onClick={handeClose}>Elevation Academy</Link> </li>
                 <li> <Link to='/project' onClick={handeClose} state={{index:html}}>Project</Link></li>
                 {
                   username ?<p className='logout' onClick={handleLogout}  >Logout</p>

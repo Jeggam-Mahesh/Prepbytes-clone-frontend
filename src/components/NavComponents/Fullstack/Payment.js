@@ -35,7 +35,7 @@ function Payment() {
         //   alert(response.razorpay_payment_id)
         //   alert(response.razorpay_order_id)
         //   alert(response.razorpay_signature)
-          navigate('/fullstack')
+          navigate('/online-full-stack-developer-mern-certification-program')
           
           const paymentOption={
             razorpay_payment_id:response.razorpay_payment_id,

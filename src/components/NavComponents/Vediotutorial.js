@@ -10,7 +10,7 @@ function Vediotutorial() {
     useEffect (()=>{
         axios.get('https://mahesh-prepbytes-server.onrender.com/vedios').then((res)=>setVdata(res.data))
     },[])
-    console.log("vdata",vdata);
+    // console.log("vdata",vdata);
     if(!vdata){
       return <Isloading/>
     }

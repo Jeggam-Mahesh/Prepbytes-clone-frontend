@@ -18,15 +18,15 @@ function RouteComp() {
         <>
  <Routes>
     <Route path='/' element={<Home/>}/>
-    <Route path='/mocktest' element={<MockTest/>}/>
+    <Route path='/mock-tests' element={<MockTest/>}/>
     <Route path='/checkout' element={<Checkout/>}/>
     <Route path='/payment' element={<Payment/>}/>
     <Route path='/dashboard' element={<Dashboard/>}/>
     <Route path='/project' element={<ProjectsComp/>}/>
-    <Route path='/vediotutorial' element={<Vediotutorial/>}/>
-    <Route path='/masterprogram' element={<MasterPrograming/>}/>
-    <Route path='/fullstack' element={<FullStack/>}/>
-    <Route path='/elevation' element={<Elevation/>}/>
+    <Route path='/preparation-videos' element={<Vediotutorial/>}/>
+    <Route path='/master-competitive-program' element={<MasterPrograming/>}/>
+    <Route path='/online-full-stack-developer-mern-certification-program' element={<FullStack/>}/>
+    <Route path='/elevation-academy' element={<Elevation/>}/>
     <Route path='/login' element={<SignInRegComp/>}/>
     <Route path='/register' element={<SignInRegComp/>}/>
     <Route path='/forgotpassword' element={<ForgetPassword/>}/>
