@@ -9,13 +9,14 @@ import { setTestData } from "../../../app/TestEnrolledSlice";
 import axios from "axios";
 import { setCourseData } from "../../../app/CourseEnrolled";
 // import Footer from "../../Footer/Footer";
-// import Isloading from "../Loading/Isloading";
+import Isloading from "../Loading/Isloading";
 import HeaderNav from '../../../Temp/HeaderNav'
 function Dashboard() {
   const dispatch = useDispatch();
   const Testdata = useSelector((state) => state.testenrolled.data);
   const Coursedata = useSelector((state) => state.course_enrolled.data);
   let [count, setCount] = useState(0);
+  const [vdata,setVdata]=useState();
   useEffect(() => {
     async function fetchData() {
       try {
@@ -28,6 +29,7 @@ function Dashboard() {
           "https://mahesh-prepbytes-server.onrender.com/courseEnrolled",{headers:{authorization:token}}
         );
         dispatch(setCourseData(response2.data));
+        axios.get('https://mahesh-prepbytes-server.onrender.com/vedios').then((res)=>setVdata(res.data)) 
         
         // if(Coursedata){
         //   setCourseCount(Coursedata.length)
@@ -43,7 +45,9 @@ function Dashboard() {
 
     fetchData();
   }, [dispatch]);
-  
+  if(!vdata){
+    return <Isloading/>
+  }
   // console.log("course dataaa=======",Coursedata);
   
 
